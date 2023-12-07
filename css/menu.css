@@ -4,6 +4,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
 @media screen and (min-width: 660px) {
     .grid_1-1-2 {
         display: grid;
@@ -13,3 +19,13 @@
 }
 
 /* Styling */
+
+button {
+    background-color: #FBF5DD;
+    border-color: #657632;
+    border-width: 3px;
+}
+
+button:hover {
+    background-color: #657632;
+}
