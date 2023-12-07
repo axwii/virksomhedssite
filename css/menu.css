@@ -60,3 +60,14 @@ section {
 img {
     max-width: 45%;
 }
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size {
+    font-size: xx-large;
+    border-width: 4px;
+}
