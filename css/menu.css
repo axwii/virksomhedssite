@@ -2,7 +2,14 @@
 .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: #CD3333;
 }
+
+.grid_1-1_ {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 .grid_1-1-1-1 {
     display: grid;
@@ -24,8 +31,32 @@ button {
     background-color: #FBF5DD;
     border-color: #657632;
     border-width: 3px;
+    color: #657632;
 }
 
 button:hover {
     background-color: #657632;
+    color: #FBF5DD;
+}
+
+h1 {
+    font-size: xxx-large;
+    font-style: bold;
+}
+
+h2 {
+    color: #7F503D;
+}
+
+.redline {
+    color: #CD3333;
+    background-color: #CD3333;
+}
+
+section {
+    padding: 60px;
+}
+
+img {
+    max-width: 45%;
 }
