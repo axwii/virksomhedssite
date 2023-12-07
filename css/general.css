@@ -13,3 +13,14 @@ footer {
     line-height: 2em;
     padding: 70px;
 }
+
+ul {
+    list-style: none;
+}
+
+li:before {
+    content: "►";
+    display: block;
+    float: left;
+    width: 2em;
+}
