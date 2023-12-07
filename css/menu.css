@@ -1,0 +1,15 @@
+/* Layout */
+.grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 660px) {
+    .grid_1-1-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 1em;
+    }
+}
+
+/* Styling */

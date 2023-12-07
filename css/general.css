@@ -10,4 +10,6 @@ body {
 footer {
     background-color: #2A53C8;
     color: #EEE8CE;
+    line-height: 2em;
+    padding: 70px;
 }
