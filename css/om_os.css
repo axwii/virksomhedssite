@@ -1,0 +1,38 @@
+@media screen and (min-width: 660px) {
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* .hero-image {
+    background-image: url(/img/om_os/heroimg.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50%;
+} */
+
+img {
+    width: 60%;
+}
+
+section {
+    padding: 60px;
+}
+
+h1 {
+    font-size: xxx-large;
+    font-style: bold;
+}
+
+h5 {
+    color: #7F503D;
+    font-size: medium;
+}
+
+.kitchen {
+    width: 100%;
+    left: 30%;
+}
