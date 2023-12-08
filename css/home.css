@@ -4,10 +4,46 @@ button {
     border-width: 3px;
     color: #e7ebdb;
     font-size: medium;
-    padding: 20px;
+    padding: 15px;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
     color: #657632;
     background-color: #f3edd7;
+}
+
+section {
+    padding: 60px;
+}
+
+.thai {
+    text-align: center;
+    line-height: 2em;
+    width: 90%;
+}
+
+img {
+    max-width: 50%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 660px) {
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .grid_1-1_ {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
 }
