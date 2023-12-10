@@ -112,3 +112,32 @@ footer li:before {
   float: left;
   width: 2em;
 }
+
+/* Buttons*/
+.secondary-btn {
+  background-color: #FBF5DD;
+  border-color: #657632;
+  border-width: 3px;
+  color: #657632;
+  font-size: medium;
+  padding: 20px;
+}
+
+.secondary-btn:hover {
+  background-color: #657632;
+  color: #FBF5DD;
+}
+
+.primary-btn {
+  background-color: #657632;
+  border-color: #657632;
+  border-width: 3px;
+  color: #FBF5DD;
+  font-size: medium;
+  padding: 20px;
+}
+
+.primary-btn:hover {
+  background-color: #FBF5DD;
+  color: #657632;
+}

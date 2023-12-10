@@ -39,22 +39,6 @@
     }
 }
 
-/* Styling */
-
-button {
-    background-color: #FBF5DD;
-    border-color: #657632;
-    border-width: 3px;
-    color: #657632;
-    font-size: medium;
-    padding: 20px;
-}
-
-button:hover {
-    background-color: #657632;
-    color: #FBF5DD;
-}
-
 h1 {
     font-size: xxx-large;
     font-style: bold;
