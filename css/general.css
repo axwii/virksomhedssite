@@ -119,7 +119,7 @@ footer li:before {
   border: 3px solid #657632;
   color: #fbf5dd;
   font-size: medium;
-  padding: 20px;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
@@ -133,11 +133,12 @@ footer li:before {
   border: 3px solid #657632;
   color: #657632;
   font-size: medium;
-  padding: 20px;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
-.secondary-btn:hover {
+.secondary-btn:hover,
+.secondary-btn.active{
   background-color: #657632;
   color: #fbf5dd;
 }
@@ -147,7 +148,7 @@ footer li:before {
   border: 3px solid #eee8ce;
   color: #eee8ce;
   font-size: medium;
-  padding: 20px;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
