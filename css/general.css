@@ -114,30 +114,44 @@ footer li:before {
 }
 
 /* Buttons*/
+.primary-btn {
+  background-color: #657632;
+  border: 3px solid #657632;
+  color: #fbf5dd;
+  font-size: medium;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #fbf5dd;
+  color: #657632;
+}
+
 .secondary-btn {
-  background-color: #FBF5DD;
-  border-color: #657632;
-  border-width: 3px;
+  background-color: #fbf5dd;
+  border: 3px solid #657632;
   color: #657632;
   font-size: medium;
   padding: 20px;
+  cursor: pointer;
 }
 
 .secondary-btn:hover {
   background-color: #657632;
-  color: #FBF5DD;
+  color: #fbf5dd;
 }
 
-.primary-btn {
-  background-color: #657632;
-  border-color: #657632;
-  border-width: 3px;
-  color: #FBF5DD;
+.alternitive-btn {
+  background-color: #fff0;
+  border: 3px solid #eee8ce;
+  color: #eee8ce;
   font-size: medium;
   padding: 20px;
+  cursor: pointer;
 }
 
-.primary-btn:hover {
-  background-color: #FBF5DD;
-  color: #657632;
+.alternitive-btn:hover {
+  border-color: #fff;
+  color: #fff;
 }
