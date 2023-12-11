@@ -1,21 +1,3 @@
-button {
-    background-color: #657632;
-    border-color: #657632;
-    border-width: 3px;
-    color: #e7ebdb;
-    font-size: medium;
-    padding: 15px;
-    width: 40%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-button:hover {
-    color: #657632;
-    background-color: #f3edd7;
-}
-
 section {
     padding: 60px;
 }

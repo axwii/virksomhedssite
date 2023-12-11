@@ -14,21 +14,62 @@
   <body>
     <header>
       <nav>
+        <div id="logo">
+          <a href="/"
+            ><img src="img/WokshopLogo.svg" alt="Wokshop Logo"
+          /></a>
+        </div>
         <ul id="nav_list">
-          <li><a href="index.html">Home</a></li>
           <li><a href="restaurant.html">Restauranter</a></li>
-          <li><a href="takeaway.html">Bestil takeaway</a></li>
+          <li>
+            <a href="takeaway.html"><strong>Bestil takeaway</strong></a>
+          </li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="om_os.html">Om os</a></li>
         </ul>
       </nav>
+      <div id="separator"></div>
     </header>
     <main>
       <section>
-        <h1>A taste of Thailand</h1>
-        <article>
-          <p>testing takeaway page</p>
-        </article>
+        <h1>Bestil takeaway</h1>
+        <p>Vælg din restaurant</p>
+        <div class="grid_1-1-1-1" id="btn_container">
+          <button class="secondary-btn">København K</button>
+          <button class="secondary-btn">Lyngby</button>
+          <button class="secondary-btn">Lyngby Hovedgade</button>
+          <button class="secondary-btn">Rungsted havn</button>
+          <button class="secondary-btn">Frederiksberg</button>
+          <button class="secondary-btn">Valby</button>
+          <button class="secondary-btn">Odense</button>
+          <button class="secondary-btn">Østerbro</button>
+          <button class="secondary-btn">Hellerup</button>
+          <button class="secondary-btn">Roskilde</button>
+          <button class="secondary-btn">Amager</button>
+        </div>
+      </section>
+      <section id="menuSection">
+        <h1>Vælg dine retter</h1>
+        <h3>Snacks</h3>
+        <div class="grid_1-1" id="snacksContainer"></div>
+        <h3>Salads & sides</h3>
+        <div class="grid_1-1" id="saladsContainer"></div>
+      </section>
+      <section>
+        <h1>Vælg tidspunkt for din afhentning</h1>
+        <div class="grid_1-1-1-1" id="btn_container">
+          <button class="secondary-btn">18:00</button>
+          <button class="secondary-btn">18:15</button>
+          <button class="secondary-btn">18:30</button>
+          <button class="secondary-btn">18:45</button>
+          <button class="secondary-btn">19:00</button>
+          <button class="secondary-btn">19:15</button>
+          <button class="secondary-btn">19:30</button>
+          <button class="secondary-btn">19:45</button>
+        </div>
+        <div id="pay_container_btn">
+          <button class="primary-btn">Gå til betaling</button>
+        </div>
       </section>
     </main>
     <footer>
@@ -80,5 +121,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
