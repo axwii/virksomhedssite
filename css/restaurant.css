@@ -1,3 +1,24 @@
+.grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px 20px;
+}
+
+@media screen and (min-width: 660px) {
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 50%;
+        /* border-left: solid 2px red; */
+    }
+
+    .grid_1-1_ {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* border-left: solid 2px red; */
+    }
+}
+
 .hero-image {
     background-color: black;
     background-position: center;
@@ -18,4 +39,42 @@
 
 img {
     width: 100%;
+}
+
+.map {
+    width: 50%;
+}
+
+.water {
+    width: 70%;
+}
+
+.p {
+    width: 65%;
+
+}
+
+p {
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: xxx-large;
+    font-style: bold;
+}
+
+section {
+    padding: 100px;
+}
+
+article {
+    padding: 0px 100px;
+}
+
+#btn_container {
+    max-width: 800px;
+}
+
+#btn_container button {
+    padding: 15px 2px;
 }
