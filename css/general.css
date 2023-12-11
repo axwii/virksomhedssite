@@ -76,6 +76,7 @@ header {
   #nav_list li {
     display: block;
   }
+
   #nav_list li a {
     line-height: 20px;
   }
@@ -83,6 +84,7 @@ header {
   #logo {
     display: none;
   }
+
   #separator {
     display: none;
   }
@@ -138,7 +140,7 @@ footer li:before {
 }
 
 .secondary-btn:hover,
-.secondary-btn.active{
+.secondary-btn.active {
   background-color: #657632;
   color: #fbf5dd;
 }
@@ -153,6 +155,6 @@ footer li:before {
 }
 
 .alternitive-btn:hover {
-  border-color: #fff;
-  color: #fff;
+  border-color: #657632;
+  color: #657632;
 }
