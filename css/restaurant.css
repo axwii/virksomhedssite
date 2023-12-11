@@ -1,0 +1,21 @@
+.hero-image {
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: #EEE8CE;
+}
+
+img {
+    width: 100%;
+}
