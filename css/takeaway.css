@@ -1,10 +1,10 @@
 section {
   padding: 20px 120px;
+  border-bottom: solid 2px #CD3333;
 }
 
 section:first-of-type {
   padding-top: 70px;
-  border-bottom: solid 2px red;
 }
 
 .grid_1-1 {

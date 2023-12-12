@@ -12,26 +12,27 @@ body {
 }
 
 /* Header styling*/
+
 #separator {
   position: absolute;
-  left: 100px;
+  left: 80px;
   top: 0;
   height: 200vh;
   width: 2px;
-  background: red;
+  background: #CD3333;
   pointer-events: none;
 }
 
 header {
   overflow: hidden;
-  height: 100px;
-  border-bottom: 2px solid red;
+  height: 80px;
+  border-bottom: 2px solid #CD3333;
 }
 
 #logo {
   float: left;
-  height: 100px;
-  margin: 0 0 0 100px;
+  height: 80px;
+  margin: 0 0 0 80px;
 }
 
 #logo img {
@@ -51,7 +52,7 @@ header {
 #nav_list li {
   display: inline-block;
   height: 100%;
-  border-left: 2px solid red;
+  border-left: 2px solid #CD3333;
 }
 
 #nav_list li a:hover {
@@ -60,8 +61,8 @@ header {
 
 #nav_list li a {
   text-decoration: none;
-  padding: 10px 40px;
-  line-height: 80px;
+  padding: 10px 20px;
+  line-height: 60px;
   color: #784a37;
   display: block;
   height: 100%;
@@ -92,7 +93,7 @@ header {
   header {
     overflow: show;
     height: 160px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #CD3333;
   }
 }
 
