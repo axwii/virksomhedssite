@@ -15,7 +15,7 @@
     .grid_1-1_ {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* border-left: solid 2px red; */
+        gap: 2em;
     }
 }
 
