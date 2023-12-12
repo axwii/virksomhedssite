@@ -11,17 +11,33 @@ body {
   padding: 0;
 }
 
-/* Header styling*/
+#main-content {
+  margin-bottom: -2px;
+}
 
 #separator {
   position: absolute;
   left: 80px;
   top: 0;
-  height: 200vh;
+  height: 100%;
   width: 2px;
   background: #CD3333;
   pointer-events: none;
 }
+
+@media screen and (max-width: 1000px) {
+  #separator {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #separator {
+    display: none;
+  }
+}
+
+
+/* Header styling*/
 
 header {
   overflow: hidden;
