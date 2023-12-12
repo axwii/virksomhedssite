@@ -29,29 +29,6 @@ btnContainers.forEach(function(btnContainer) {
   });
 });
 
-// Seperator styling
-  // Function to update separator height
-  function updateSeparatorHeight() {
-    // Get the main element
-    var mainElement = document.getElementById('main-content');
-
-    // Get the computed height of the main element
-    var mainHeight = window.getComputedStyle(mainElement).height;
-
-    // Convert the height to a number and add 80px
-    var separatorHeight = parseInt(mainHeight, 10) + 80;
-
-    // Set the height of the separator with the added 80px
-    document.getElementById('separator').style.height = separatorHeight + 'px';
-  }
-
-  // Initial update on page load
-  updateSeparatorHeight();
-
-  // Update separator height on window resize
-  window.addEventListener('resize', updateSeparatorHeight);
-
-
 // Function to create a product container
 function createProductContainer(title, description, imgSrc, altText, price) {
   // Create a new div element for the product container
