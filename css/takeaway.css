@@ -4,14 +4,10 @@ section {
   border-bottom: solid 2px #CD3333;
 }
 section:last-of-type {
-  padding: 20px 10%;
   border: none;
 }
 @media screen and (max-width: 600px) {
   section {
-    padding: 20px 5%;
-  }
-  section:last-of-type {
     padding: 20px 5%;
   }
 }

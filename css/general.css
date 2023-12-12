@@ -11,6 +11,7 @@ body {
   padding: 0;
 }
 
+/* Separator styling*/
 #main-content {
   margin-bottom: -2px;
 }
@@ -36,9 +37,7 @@ body {
   }
 }
 
-
 /* Header styling*/
-
 header {
   overflow: hidden;
   height: 80px;
@@ -130,6 +129,10 @@ footer li:before {
   display: block;
   float: left;
   width: 2em;
+}
+
+footer section{
+  padding: 0;
 }
 
 /* Buttons*/
