@@ -15,9 +15,7 @@
     <header>
       <nav>
         <div id="logo">
-          <a href="/"
-            ><img src="img/WokshopLogo.svg" alt="Wokshop Logo"
-          /></a>
+          <a href="/"><img src="img/WokshopLogo.svg" alt="Wokshop Logo"/></a>
         </div>
         <ul id="nav_list">
           <li><a href="restaurant.html">Restauranter</a></li>
@@ -50,10 +48,54 @@
       </section>
       <section id="menuSection">
         <h1>Vælg dine retter</h1>
-        <h3>Snacks</h3>
-        <div class="grid_1-1" id="snacksContainer"></div>
-        <h3>Salads & sides</h3>
-        <div class="grid_1-1" id="saladsContainer"></div>
+        <div id="takeaway_overview">
+          <div class="product_overview">
+            <h3>Snacks</h3>
+            <div class="grid_1-1" id="snacksContainer"></div>
+            <h3>Salads & sides</h3>
+            <div class="grid_1-1" id="saladsContainer"></div>
+            <h3>Små retter</h3>
+            <div class="grid_1-1" id="smallDishes"></div>
+            <h3>Soups and noodles</h3>
+            <div class="grid_1-1" id="soupsAndNoodles"></div>
+          </div>
+          <div class="order_overview">
+            <h3 id="order_title">Din ordre</h3>
+            <div id="order_list">
+              <hr>
+              <div class="order_item">
+                <p>2x</p>
+                <p>Shrimp chips</p>
+                <p>90 kr.</p>
+              </div>
+              <div class="order_item">
+                <p>5x</p>
+                <p>Wontons</p>
+                <p>395 kr.</p>
+              </div>
+              <div class="order_item">
+                <p>1x</p>
+                <p>Cucumber salad</p>
+                <p>65 kr.</p>
+              </div>
+              <div class="order_item">
+                <p>1x</p>
+                <p>Corn fritters</p>
+                <p>75 kr.</p>
+              </div>
+              <hr>
+              <div class="order_prize">
+                <p>Total</p>
+                <p>200 kr.</p>
+              </div>
+              <div class="order_prize">
+                <p>Heraf moms</p>
+                <p>40 kr.</p>
+              </div>
+              <button class="primary-btn"><img src="img/cart.svg" alt="cart icon">Bestil</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h1>Vælg tidspunkt for din afhentning</h1>

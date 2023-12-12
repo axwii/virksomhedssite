@@ -5,25 +5,38 @@ function test() {
 }
 
 // Active button on click - active on takeaway page and resturant page
-let btnContainer = document.getElementById('btn_container');
-let activeButton = null;
+let btnContainers = document.querySelectorAll('#btn_container');
+let activeButtons = [];
 
-btnContainer.addEventListener('click', function(event) {
-  if (event.target.classList.contains('secondary-btn')) {
-    // Check if the clicked element has the 'secondary-btn' class
-    if (activeButton) {
-      activeButton.classList.remove('active');
+btnContainers.forEach(function(btnContainer) {
+  btnContainer.addEventListener('click', function(event) {
+    if (event.target.classList.contains('secondary-btn')) {
+      // Check if the clicked element has the 'secondary-btn' class
+      let activeButton = activeButtons.find(function(button) {
+        return button.container === btnContainer;
+      });
+
+      if (activeButton) {
+        activeButton.button.classList.remove('active');
+      }
+
+      event.target.classList.add('active');
+      activeButtons.push({
+        container: btnContainer,
+        button: event.target
+      });
     }
-    event.target.classList.add('active');
-    activeButton = event.target;
-  }
+  });
 });
 
-// takeaway page
+// Function to create a product container
 function createProductContainer(title, description, imgSrc, altText, price) {
+  // Create a new div element for the product container
   const container = document.createElement('div');
+  // Set the class name for styling
   container.className = 'product_container';
 
+  // Set the inner HTML of the container using template literals
   container.innerHTML = `
     <h4 class="product_title">${title}</h4>
     <p class="product_des">${description}</p>
@@ -37,17 +50,96 @@ function createProductContainer(title, description, imgSrc, altText, price) {
     </button>
   `;
 
+  // Return the created container
   return container;
 }
 
+// Get references to containers in the HTML
 const snacksContainer = document.getElementById('snacksContainer');
 const saladsContainer = document.getElementById('saladsContainer');
+const smallDishes = document.getElementById('smallDishes');
+const soupsAndNoodles = document.getElementById('soupsAndNoodles');
 
 // Add snacks
-snacksContainer.appendChild(createProductContainer('Peanuts', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.', 'img/menu/Grilled_Eggplants.avif', 'Snack 1', 40));
-snacksContainer.appendChild(createProductContainer('Shrip chips', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.', 'img/menu/ruller.avif', 'Snack 2', 45));
-snacksContainer.appendChild(createProductContainer('Wontons', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.', 'img/menu/Fried_Tofu-Sticks.png', 'Snack 3', 45));
+snacksContainer.appendChild(createProductContainer('Peanuts', 'Ristede peanuts, kaffir limeblade, havsalt, sprøde løg og ristet chili. VG, GF.', 'img/takeaway/peanuts.png', 'Snack 1', 40));
+snacksContainer.appendChild(createProductContainer('Shrip chips', 'Luftige rejeschips. Serveres med sweet chili sauce.', 'img/takeaway/shrimpChips.png', 'Snack 2', 45));
+snacksContainer.appendChild(createProductContainer('Wontons', 'Knasende, sprøde wontons med krydret fyld af kylling, rejer, forårsløg og koriander. 5 stk.', 'img/takeaway/wontons.png', 'Snack 3', 45));
+snacksContainer.appendChild(createProductContainer('Crispy beef', 'Soyamarineret oksefilet, dybstegt i tynde strimler.Serveres med soya chili sauce.', 'img/takeaway/crispyBeef.png', 'Snack 4', 85));
+snacksContainer.appendChild(createProductContainer('Spring rolls', 'Sprøde forårsruller med kylling, gulerod, kartofler, glasnudler og hvidkål. 3 stk.', 'img/takeaway/springRolls.png', 'Snack 5', 75));
+snacksContainer.appendChild(createProductContainer('Fresh spring rolls', 'Agurk, gulerod, salat, sød thaibasilikum, mynte og koriander rullet i rispapir. 6 stk. VG, GF', 'img/takeaway/freshSpringRolls.png', 'Snack 6', 79));
+snacksContainer.appendChild(createProductContainer('Vegan spring rolls', 'Sprøde, veganske forårsruller med gulerod, bønnespirer, glasnudler, hvidkål og forårsløg. 3 stk. VG', 'img/takeaway/veganSpringRolls.png', 'Snack 7', 79));
 
 // Add salads
-saladsContainer.appendChild(createProductContainer('Broccoli thai kale', 'Ristet broccoli og thai kale med hvidløg. VG.', 'img/menu/salad.avif', 'Side 1', 65));
-saladsContainer.appendChild(createProductContainer('Cucumber salad', 'Traditionel, thailandsk agurkesalat, Tam Taeng, med thaibønner og thaiauberginer. GF, H', 'img/menu/ruller.avif', 'Side 2', 65));
+saladsContainer.appendChild(createProductContainer('Broccoli thai kale', 'Ristet broccoli og thai kale med hvidløg. VG.', 'img/takeaway/broccoliThaiKale.png', 'Side 1', 65));
+saladsContainer.appendChild(createProductContainer('Cucumber salad', 'Traditionel, thailandsk agurkesalat, Tam Taeng, med thaibønner og thaiauberginer. GF, H', 'img/takeaway/cucumberSalad.png', 'Side 2', 65));
+saladsContainer.appendChild(createProductContainer('Green papaya', 'Blandet salat med grøn papaya, gulerod, thaibønner og cherrytomater. Toppet med frisk chili og peanuts. GF', 'img/takeaway/greenPapaya.png', 'Side 3', 65));
+saladsContainer.appendChild(createProductContainer('Eggplant w beans', 'Lange thaiauberginer med soyabønner, hvidløg,sød thaibasilikum og frisk chili. VG', 'img/takeaway/eggplantWBeans.png', 'Side 4', 65));
+saladsContainer.appendChild(createProductContainer('Morning glory', 'Thaispinat stegt i wok sammen med hvidløg,frisk chili og sprøde løg. VG, HH', 'img/takeaway/morningGlory.png', 'Side 5', 65));
+saladsContainer.appendChild(createProductContainer('Jasminris', '', 'img/takeaway/jasminris.png', 'Side 6', 25));
+saladsContainer.appendChild(createProductContainer('Brune jasminris', '', 'img/takeaway/bruneJasminris.png', 'Side 7', 25));
+saladsContainer.appendChild(createProductContainer('Risnudler', '', 'img/takeaway/risnudler.png', 'Side 8', 25));
+
+// Add small dishes
+smallDishes.appendChild(createProductContainer('Fried tofu sticks', 'Dybstegte tofuspyd med knuste peanuts. Serveres med sweet & sour peanutsauce. 3 stk. VG, GF.', 'img/takeaway/friedTofuSticks.png', 'Small 1', 85));
+smallDishes.appendChild(createProductContainer('Chicken meatballs', 'Saftige kyllingekødboller med forårsløg og løg.Serveres med tamarindsauce. 3 stk.', 'img/takeaway/chickenMeatballs.png', 'Small 2', 75));
+smallDishes.appendChild(createProductContainer('Chicken wings', 'Dybstegte, marinerede chicken wings. Toppet med stegt, sød thaibasilikum. 3 stk.', 'img/takeaway/chickenWings.png', 'Small 3', 75));
+smallDishes.appendChild(createProductContainer('Corn fritters', 'Sprøde majsfritter med hvidløg, koriander, forårsløg og grøn chili. 3 stk. V', 'img/takeaway/cornFritters.png', 'Small 4', 75));
+smallDishes.appendChild(createProductContainer('Tamarind prawns', 'Marinerede tigerrejer i tamarindsauce med koriander, sprøde løg og chili. 5 stk.', 'img/takeaway/tamarindPrawns.png', 'Small 5', 89));
+smallDishes.appendChild(createProductContainer('Salmon w sauce', 'Grillet, marineret laks toppet med dressing lavet af koriander, hvidløg, lime og chili. GF, H', 'img/takeaway/salmonWSauce.png', 'Small 6', 110));
+smallDishes.appendChild(createProductContainer('Chicken satay', 'Marinerede kyllingespyd. Serveres med peanutsauce. 3 stk.', 'img/takeaway/chickenSatay.png', 'Small 7', 75));
+
+// Add soups and noodles
+soupsAndNoodles.appendChild(createProductContainer('Tom kha', 'Kokossuppe med kylling, østershat, stråsvampe,citrongræs og galangal. Toppet med frisk chili, koriander og forårsløg.', 'img/takeaway/tomKhaSoup.png', 'Soup and noodle 1', 175));
+soupsAndNoodles.appendChild(createProductContainer('Fried noodles', 'Fintskåret oksekød stegt i wok med risnudler, æg, thai kale, broccoli, bønnespirer og forårsløg.', 'img/takeaway/friedNoodles.png', 'Soup and noodle 2', 195));
+
+
+
+// // Function to add products to a container
+// function addProducts(container, products) {
+//   // Loop through each product and append it to the container
+//   products.forEach(product => container.appendChild(createProductContainer(...product)));
+// }
+
+// // Add snacks to the snacksContainer
+// addProducts(snacksContainer, [
+//   ['Peanuts', 'Ristede peanuts, kaffir limeblade, havsalt, sprøde løg og ristet chili. VG, GF.', 'img/takeaway/peanuts.png', 'Snack 1', 40],
+//   ['Shrip chips', 'Luftige rejeschips. Serveres med sweet chili sauce.', 'img/takeaway/shrimpChips.png', 'Snack 2', 45],
+//   ['Wontons', 'Knasende, sprøde wontons med krydret fyld af kylling, rejer, forårsløg og koriander. 5 stk.', 'img/takeaway/wontons.png', 'Snack 3', 45],
+//   ['Crispy beef', 'Soyamarineret oksefilet, dybstegt i tynde strimler.Serveres med soya chili sauce.', 'img/takeaway/crispyBeef.png', 'Snack 4', 85],
+//   ['Spring rolls', 'Sprøde forårsruller med kylling, gulerod, kartofler, glasnudler og hvidkål. 3 stk.', 'img/takeaway/springRolls.png', 'Snack 5', 75],
+//   ['Fresh spring rolls', 'Agurk, gulerod, salat, sød thaibasilikum, mynte og koriander rullet i rispapir. 6 stk. VG, GF', 'img/takeaway/freshSpringRolls.png', 'Snack 6', 79],
+//   ['Vegan spring rolls', 'Sprøde, veganske forårsruller med gulerod, bønnespirer, glasnudler, hvidkål og forårsløg. 3 stk. VG', 'img/takeaway/veganSpringRolls.png', 'Snack 7', 79],
+//   // ... (add other snacks)
+// ]);
+
+// // Add salads to the saladsContainer
+// addProducts(saladsContainer, [
+//   ['Broccoli thai kale', 'Ristet broccoli og thai kale med hvidløg. VG.', 'img/takeaway/broccoliThaiKale.png', 'Side 1', 65],
+//   ['Cucumber salad', 'Traditionel, thailandsk agurkesalat, Tam Taeng, med thaibønner og thaiauberginer. GF, H', 'img/takeaway/cucumberSalad.png', 'Side 2', 65],
+//   ['Green papaya', 'Blandet salat med grøn papaya, gulerod, thaibønner og cherrytomater. Toppet med frisk chili og peanuts. GF', 'img/takeaway/greenPapaya.png', 'Side 3', 65],
+//   ['Eggplant w beans', 'Lange thaiauberginer med soyabønner, hvidløg,sød thaibasilikum og frisk chili. VG', 'img/takeaway/eggplantWBeans.png', 'Side 4', 65],
+//   ['Morning glory', 'Thaispinat stegt i wok sammen med hvidløg,frisk chili og sprøde løg. VG, HH', 'img/takeaway/morningGlory.png', 'Side 5', 65],
+//   ['Jasminris', '', 'img/takeaway/jasminris.png', 'Side 6', 25],
+//   ['Brune jasminris', '', 'img/takeaway/bruneJasminris.png', 'Side 7', 25]
+//   ['Risnudler', '', 'img/takeaway/risnudler.png', 'Side 8', 25],
+//   // ... (add other salads)
+// ]);
+
+// // Add small dishes to the smallDishes container
+// addProducts(smallDishes, [
+//   ['Fried tofu sticks', 'Dybstegte tofuspyd med knuste peanuts. Serveres med sweet & sour peanutsauce. 3 stk. VG, GF.', 'img/takeaway/friedTofuSticks.png', 'Small 1', 85],
+//   ['Chicken meatballs', 'Saftige kyllingekødboller med forårsløg og løg.Serveres med tamarindsauce. 3 stk.', 'img/takeaway/chickenMeatballs.png', 'Small 2', 75],
+//   ['Chicken wings', 'Dybstegte, marinerede chicken wings. Toppet med stegt, sød thaibasilikum. 3 stk.', 'img/takeaway/chickenWings.png', 'Small 3', 75],
+//   ['Corn fritters', 'Sprøde majsfritter med hvidløg, koriander, forårsløg og grøn chili. 3 stk. V', 'img/takeaway/cornFritters.png', 'Small 4', 75],
+//   ['Tamarind prawns', 'Marinerede tigerrejer i tamarindsauce med koriander, sprøde løg og chili. 5 stk.', 'img/takeaway/tamarindPrawns.png', 'Small 5', 89],
+//   ['Salmon w sauce', 'Grillet, marineret laks toppet med dressing lavet af koriander, hvidløg, lime og chili. GF, H', 'img/takeaway/salmonWSauce.png', 'Small 6', 110],
+//   ['Chicken satay', 'Marinerede kyllingespyd. Serveres med peanutsauce. 3 stk.', 'img/takeaway/chickenSatay.png', 'Small 7', 75],
+//   // ... (add other small dishes)
+// ]);
+
+// // Add soups and noodles to the soupsAndNoodles container
+// addProducts(soupsAndNoodles, [
+//   ['Tom kha', 'Kokossuppe med kylling, østershat, stråsvampe,citrongræs og galangal. Toppet med frisk chili, koriander og forårsløg.', 'img/takeaway/tomKhaSoup.png', 'Soup and noodle 1', 175],
+//   ['Fried noodles', 'Fintskåret oksekød stegt i wok med risnudler, æg, thai kale, broccoli, bønnespirer og forårsløg.', 'img/takeaway/friedNoodles.png', 'Soup and noodle 2', 195],
+//   // ... (add other soups and noodles)
+// ]);
