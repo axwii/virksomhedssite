@@ -5,18 +5,28 @@ function test() {
 }
 
 // Active button on click - active on takeaway page and resturant page
-let btnContainer = document.getElementById('btn_container');
-let activeButton = null;
+let btnContainers = document.querySelectorAll('#btn_container');
+let activeButtons = [];
 
-btnContainer.addEventListener('click', function(event) {
-  if (event.target.classList.contains('secondary-btn')) {
-    // Check if the clicked element has the 'secondary-btn' class
-    if (activeButton) {
-      activeButton.classList.remove('active');
+btnContainers.forEach(function(btnContainer) {
+  btnContainer.addEventListener('click', function(event) {
+    if (event.target.classList.contains('secondary-btn')) {
+      // Check if the clicked element has the 'secondary-btn' class
+      let activeButton = activeButtons.find(function(button) {
+        return button.container === btnContainer;
+      });
+
+      if (activeButton) {
+        activeButton.button.classList.remove('active');
+      }
+
+      event.target.classList.add('active');
+      activeButtons.push({
+        container: btnContainer,
+        button: event.target
+      });
     }
-    event.target.classList.add('active');
-    activeButton = event.target;
-  }
+  });
 });
 
 // takeaway page
