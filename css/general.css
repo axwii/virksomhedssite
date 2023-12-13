@@ -16,6 +16,10 @@ body {
   padding: 0;
 }
 
+body p {
+  color: ge;
+}
+
 /* Separator styling*/
 #main-content {
   margin-bottom: -2px;
@@ -209,7 +213,7 @@ body {
 
 /* Footer styling*/
 footer {
-  background-color: #2a53c8;
+  background-color: #404143;
   color: #eee8ce;
   line-height: 2em;
   padding: 70px;
@@ -239,6 +243,8 @@ footer section {
   padding: 24px 98px;
   cursor: pointer;
   font-family: interb;
+  margin-bottom: 56px;
+  margin-top: 56px;
 }
 
 .primary-btn_1 {

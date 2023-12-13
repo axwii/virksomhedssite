@@ -21,7 +21,7 @@ section:last-of-type {
 
 .thai {
   text-align: center;
-  line-height: 2em;
+  line-height: 1.2em;
 }
 
 #nav_list li a {
@@ -67,8 +67,9 @@ img {
 }
 
 .hero-text h1 {
-  font-size: 5rem;
+  font-size: 8em;
   margin: 0;
+  font-family: interb;
 }
 
 .hero-image2 {
@@ -84,10 +85,19 @@ img {
 .hero-text2 {
   text-align: left;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 20%;
   transform: translate(-50%, -50%);
   color: #eee8ce;
+  font-size: 8em;
+  margin-top: 180px;
+}
+
+.hero-text2 h1 {
+  text-align: left;
+  font-size: 0.8em;
+  margin-top: 270px;
+  margin-left: 180px;
 }
 
 .imgs {
@@ -144,4 +154,8 @@ h1 {
 .restaurant_btn {
   margin-left: 760px;
   margin-top: 24px;
+}
+
+.hero-overskrift {
+  font-size: 3em;
 }
