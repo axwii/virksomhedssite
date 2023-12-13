@@ -1,8 +1,3 @@
-window.addEventListener("load", test);
-
-function test() {
-  console.log("show test");
-}
 
 // Active button on click - active on takeaway page and resturant page
 let btnContainers = document.querySelectorAll('#btn_container');

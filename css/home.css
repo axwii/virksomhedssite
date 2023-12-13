@@ -24,6 +24,15 @@ section:last-of-type {
 #nav_list li a {
   color: #eee8ce;
 }
+nav.active #nav_list li a:hover{
+  color: #cd3333;
+}
+nav.active .menu {
+  background: #282121;
+}
+.burger .line {
+  background-color: #eee8ce;
+}
 
 img {
   max-width: 100%;
