@@ -132,3 +132,16 @@ h1 {
   margin-left: 00px;
   margin-top: 0px;
 }
+
+.book_btn {
+  margin-left: 760px;
+  font-style: bold;
+  margin-top: 200px;
+  z-index: 2;
+}
+
+
+.restaurant_btn {
+  margin-left: 760px;
+  margin-top: 24px;
+}

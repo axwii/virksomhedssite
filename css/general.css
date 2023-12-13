@@ -233,11 +233,29 @@ footer section {
 /* Buttons*/
 .primary-btn {
   background-color: #657632;
-  border: 3px solid #657632;
+  border: 1.8px solid #657632;
+  color: #fbf5dd;
+  font-size: 1.1em;
+  padding: 24px 98px;
+  cursor: pointer;
+  font-family: interb;
+}
+
+.primary-btn_1 {
+  background-color: #657632;
+  border: 1.8px solid #657632;
   color: #fbf5dd;
   font-size: medium;
   padding: 15px 20px;
   cursor: pointer;
+  margin-top: 48px;
+  margin-bottom: -156px;
+  font-family: interb;
+}
+
+.primary-btn_1:hover {
+  background-color: #fbf5dd;
+  color: #657632;
 }
 
 .primary-btn:hover {
@@ -270,6 +288,23 @@ footer section {
 }
 
 .alternitive-btn:hover {
+  border-color: #657632;
+  color: #657632;
+}
+
+.alternative-btn {
+  background-color: #fff0;
+  border: 1.8px solid #eee8ce;
+  color: #eee8ce;
+  font-size: 1.4rem;
+  padding: 18px 100px;
+  cursor: pointer;
+  display: inline-block;
+  width: 380px;
+  font-family: interb;
+}
+
+.alternative-btn:hover {
   border-color: #657632;
   color: #657632;
 }
