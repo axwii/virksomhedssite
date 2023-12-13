@@ -111,7 +111,7 @@ section.grid_1-1>div:nth-child(2) {
 
 h1 {
   font-size: xxx-large;
-  font-style: bold;
+  font-family: interb;
 }
 
 @media screen and (min-width: 660px) {

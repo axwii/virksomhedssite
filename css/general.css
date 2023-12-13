@@ -3,6 +3,11 @@
   src: url(/fonts/inter-variablefont_slntwght-webfont.woff2);
 }
 
+@font-face {
+  font-family: interb;
+  src: url(/fonts/Inter-Bold.woff2);
+}
+
 body {
   font-family: inter;
   background-color: #fbf5dd;
@@ -31,6 +36,7 @@ body {
     left: 40px;
   }
 }
+
 @media screen and (max-width: 700px) {
   #separator {
     display: none;
@@ -104,9 +110,11 @@ body {
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
+
 .burger {
   display: none;
 }
+
 @media screen and (max-width: 850px) {
   nav {
     display: flex;
@@ -136,9 +144,11 @@ body {
   .menu {
     display: none;
   }
+
   .burger {
     display: block;
   }
+
   .burger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
     transition: 0.2s linear;
@@ -190,6 +200,7 @@ body {
     width: auto;
   }
 }
+
 @media (max-width: 390px) {
   #logo {
     justify-content: start;
