@@ -3,6 +3,11 @@ section {
   border-bottom: solid 2px #cd3333;
 }
 
+section:first-of-type {
+  padding: 0;
+  border: none;
+}
+
 section:last-of-type {
   border: none;
 }
