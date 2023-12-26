@@ -3,6 +3,11 @@ section {
   border-bottom: solid 2px #cd3333;
 }
 
+section:first-of-type {
+  padding: 0;
+  border: none;
+}
+
 section:last-of-type {
   border: none;
 }
@@ -16,7 +21,6 @@ section:last-of-type {
 .grid_1-1_ {
   border-bottom: none;
 }
-
 
 
 .thai {
@@ -58,6 +62,9 @@ img {
   z-index: -1;
   top: -83px;
 }
+.hero-image img {
+  width: 100%;
+}
 
 .hero-text {
   position: absolute;
@@ -79,6 +86,10 @@ img {
   background-size: cover;
   position: relative;
   z-index: -1;
+  width: 100%;
+}
+
+.hero-image2 img {
   width: 100%;
 }
 
@@ -139,8 +150,7 @@ h1 {
 
 
 .right_side {
-  margin-left: 00px;
-  margin-top: 0px;
+  float: right;
 }
 
 .book_btn {
